@@ -20,11 +20,12 @@ Clone the repo:
 
 ### Requirements
 * Python 3.8 (numpy, skimage, scipy, opencv)  
-* PyTorch >= 1.7 (pytorch3d)  
+* PyTorch >= 1.7 (pytorch3d compatible)  
   You can run 
   ```bash
   pip install -r requirements.txt
   ```
+  To install PyTorch3D, please follow the [official installation guide](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md)
 
 ### Usage
 1. **Prepare data & models**
