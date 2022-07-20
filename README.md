@@ -19,8 +19,8 @@ Clone the repo:
   ```
 
 ### Requirements
-* Python 3.7 (numpy, skimage, scipy, opencv)  
-* PyTorch >= 1.6 (pytorch3d)  
+* Python 3.8 (numpy, skimage, scipy, opencv)  
+* PyTorch >= 1.7 (pytorch3d)  
   You can run 
   ```bash
   pip install -r requirements.txt
@@ -38,7 +38,6 @@ Clone the repo:
     python test.py --test_folder '/path/to/trust_models' --test_split val
     ```   
     change the test_split flag to run on test set or validation set.
-    <!-- b. **Pixels In-the-wild images** -->
 
 
 ## Evaluation
@@ -62,13 +61,13 @@ If you find our work useful to your research, please consider citing:
 Training code will also be released in the future. 
 
 ## License
-This code and model are available for non-commercial scientific research purposes as defined in the [LICENSE](https://github.com/YadiraF/DECA/blob/master/LICENSE) file.
-By downloading and using the code and model you agree to the terms in the [LICENSE](https://github.com/YadiraF/DECA/blob/master/LICENSE). 
+This code and model are available for non-commercial scientific research purposes as defined in the [LICENSE](https://github.com/HavenFeng/TRUST/blob/main/LICENSE) file.
+By downloading and using the code and model you agree to the terms in the [LICENSE](https://github.com/HavenFeng/TRUST/blob/main/LICENSE). 
 
 ## Acknowledgements
 For functions or scripts that are based on external sources, we acknowledge the origin individually in each file.  
 Here are some great resources we benefit:  
-- [DECA](https://github.com/YadiraF/DECA/) for the general framework of 3D face reconstruction
+- [DECA](https://github.com/YadiraF/DECA) for the general framework of 3D face reconstruction
 - [FLAME_PyTorch](https://github.com/soubhiksanyal/FLAME_PyTorch) and [TF_FLAME](https://github.com/TimoBolkart/TF_FLAME) for the FLAME model  
 - [Pytorch3D](https://pytorch3d.org/), [neural_renderer](https://github.com/daniilidis-group/neural_renderer), [SoftRas](https://github.com/ShichenLiu/SoftRas) for rendering  
 - [kornia](https://github.com/kornia/kornia) for image/rotation processing  
@@ -81,5 +80,4 @@ We would also like to thank other recent public 3D face reconstruction works tha
 [Deep3DFaceReconstruction](https://github.com/microsoft/Deep3DFaceReconstruction/blob/master/renderer/rasterize_triangles.py), 
 [GANFit](https://github.com/barisgecer/GANFit),
 [INORig](https://github.com/zqbai-jeremy/INORig),
-[MGCNet](https://github.com/jiaxiangshang/MGCNet),
-[CEST]()
+[MGCNet](https://github.com/jiaxiangshang/MGCNet)
