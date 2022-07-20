@@ -62,7 +62,7 @@ config_test = {
     'batch_size': 16,
     'euler': False,
 
-    'tex_type': 'ten24',
+    'tex_type': 'BFM', #BFM, ten24
     'pretrain_scene': False,
     'pretrain_albedo': False,
     'scene_fix': False,
@@ -71,7 +71,7 @@ config_test = {
     'resume_training': True,
     'pretrained_modelpath_flame': './data/deca_model.tar',
     'pretrained_modelpath_status': '',
-    'savefolder': '',
+    'savefolder': './test_outputs',
 
 }
 
@@ -95,12 +95,8 @@ def save_config(config, config_path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='testing TRUST regressors')
 
-    parser.add_argument('--isTrain', default=True, type=ast.literal_eval,
-                        help='training image')
     parser.add_argument('--test_folder', default='', type=str,
                         help='test folder path')
-    parser.add_argument('--model_epoch', default='', type=str,
-                        help='model version')
     parser.add_argument('--test_split', default='val', type=str,
                         help='test data path')
     parser.add_argument('--test_data', default='', type=str,
@@ -116,9 +112,9 @@ if __name__ == '__main__':
     if args.test_folder !='':
         config.n_scenelight = 3
 
-        config.pretrained_modelpath_scene ='{}/E_scene_light_epoch_{}.tar'.format(args.test_folder, args.model_epoch)
-        config.pretrained_modelpath_facel = '{}/E_face_light_epoch_{}.tar'.format(args.test_folder, args.model_epoch)
-        config.pretrained_modelpath_albedo = '{}/E_albedo_epoch_{}.tar'.format(args.test_folder, args.model_epoch)
+        config.pretrained_modelpath_scene ='{}/E_scene_light_{}.tar'.format(args.test_folder, config.tex_type)
+        config.pretrained_modelpath_facel = '{}/E_face_light_{}.tar'.format(args.test_folder, config.tex_type)
+        config.pretrained_modelpath_albedo = '{}/E_albedo_{}.tar'.format(args.test_folder, config.tex_type)
 
         if args.test_data!='':
             config.test_data = args.test_data
@@ -126,7 +122,7 @@ if __name__ == '__main__':
 
         if args.test_split!='':
             config.test_split = args.test_split
-            config.dataname = '{}_{}'.format(args.test_split, args.rot)
+            config.dataname = 'benchmark_split_{}'.format(args.test_split)
 
         trust = TRUST(config)
 
