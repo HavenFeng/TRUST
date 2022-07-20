@@ -25,7 +25,7 @@ Clone the repo:
   ```bash
   pip install -r requirements.txt
   ```
-  To install PyTorch3D, please follow the [official installation guide](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md)
+  If you encountered errors when installing PyTorch3D, please follow the [official installation guide](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md) to re-install the library.
 
 ### Usage
 1. **Prepare data & models**
