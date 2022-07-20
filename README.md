@@ -25,11 +25,6 @@ Clone the repo:
   ```bash
   pip install -r requirements.txt
   ```
-  Or use virtual environment by runing 
-  ```bash
-  bash install_conda.sh
-  ```
-  For visualization, we use our rasterizer that uses pytorch JIT Compiling Extensions. If there occurs a compiling error, you can install [pytorch3d](https://github.com/facebookresearch/pytorch3d/blob/master/INSTALL.md) instead and set --rasterizer_type=pytorch3d when running the demos.
 
 ### Usage
 1. **Prepare data & models**
@@ -40,7 +35,7 @@ Clone the repo:
 2. **Run test**  
     a. FAIR benchmark
     ```bash
-    python demos/demo_reconstruct.py -i TestSamples/examples --saveDepth True --saveObj True
+    python test.py --test_folder '/path/to/trust_models' --test_split val
     ```   
     change the test_split flag to run on test set or validation set.
     <!-- b. **Pixels In-the-wild images** -->
@@ -87,4 +82,4 @@ We would also like to thank other recent public 3D face reconstruction works tha
 [GANFit](https://github.com/barisgecer/GANFit),
 [INORig](https://github.com/zqbai-jeremy/INORig),
 [MGCNet](https://github.com/jiaxiangshang/MGCNet),
-[CEST]
+[CEST]()
