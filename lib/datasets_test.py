@@ -23,6 +23,7 @@ import cv2
 
 from skimage.io import imread, imsave
 from skimage.transform import estimate_transform, warp, resize, rescale
+import PIL.Image
 
 '''
 images and keypoints: nomalized to [-1,1]
@@ -183,7 +184,8 @@ class AgoraFaceDataset_test(Dataset):
         image = imread(image_path) / 255.
         kpt = np.load(kpt_path)[:, :2]
 
-        scene_image = imread(scene_path) / 255.
+        scene_image = PIL.Image.open(scene_path).convert('RGB')
+        scene_image = np.asarray(scene_image) / 255.
 
         ### crop information
         tform = self.crop(image, kpt)
