@@ -83,4 +83,4 @@ We would also like to thank other recent public 3D face reconstruction works tha
 [INORig](https://github.com/zqbai-jeremy/INORig),
 [MGCNet](https://github.com/jiaxiangshang/MGCNet)
 
-This work was partly supported by the German Federal Ministry of Education and Research (BMBF): Tuebingen AI Center, FKZ: 01IS18039A
+This work was partly supported by the German Federal Ministry of Education and Research (BMBF): Tuebingen AI Center, FKZ: 01IS18039B
