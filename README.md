@@ -44,7 +44,7 @@ Clone the repo:
 ## Evaluation
 TRUST (ours) achieves 57% lower error of the total score (35% lower on Average ITA error, 77% lower on Bias error),  on the [FAIR Challenge](https://trust.is.tue.mpg.de/challenge.html) compared to the previous state-of-the-art method.  
 
-For more details of the evaluation, please check our [arXiv paper](https://arxiv.org/abs/2012.04012). 
+For more details of the evaluation, please check our [arXiv paper](https://arxiv.org/abs/2205.03962). 
 
 
 ## Citation
