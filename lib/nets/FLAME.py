@@ -245,11 +245,11 @@ class FLAMETex(nn.Module):
             texture_basis = tex_space[pc_key].reshape(-1, n_pc)
 
 
-        elif config.tex_type == 'ten24':
+        elif config.tex_type == 'BalanceAlb':
             mu_key = 'mean'
             pc_key = 'tex_dir'
             n_pc = 54
-            tex_path = config.ten24_tex_path
+            tex_path = config.BalanceAlb_tex_path
             tex_space = np.load(tex_path)
             texture_mean = tex_space[mu_key].reshape(1, -1)/255.
             texture_basis = tex_space[pc_key].reshape(-1, n_pc)/255.
