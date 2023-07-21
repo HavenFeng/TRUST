@@ -29,7 +29,7 @@ fixed_dict = {
             'flame_lmk_embedding_path': './data/landmark_embedding.npy',
 
             'BFM_tex_path': './data/FLAME_albedo_from_BFM.npz',
-            'ten24_tex_path': './data/texture_3DScanStore_512.npz',
+            'BalanceAlb_tex_path': './data/BalanceAlb_model.npz',
             'lightprobe_normal_path': './data/lightprobe_normal_images.npy',
             'lightprobe_albedo_path': './data/lightprobe_albedo_images.npy',
 
@@ -62,7 +62,7 @@ config_test = {
     'batch_size': 16,
     'euler': False,
 
-    'tex_type': 'BFM', #BFM, ten24
+    'tex_type': 'BalanceAlb', # BalanceAlb is the albedo model for the paper's results
     'pretrain_scene': False,
     'pretrain_albedo': False,
     'scene_fix': False,
